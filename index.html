@@ -237,7 +237,7 @@
             font-weight: 600;
         }
 
-        /* حاوي الصورة الرئيسية مع النص أعلاها */
+        /* حاوي الصورة الرئيسية مع البطاقة أعلاها */
         .hero-image-wrapper {
             flex: 1;
             min-width: 300px;
@@ -250,25 +250,54 @@
             background-color: var(--primary-color);
             color: #fff;
             padding: 0.8rem 1.2rem;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 12px;
-            text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             border-bottom: 3px solid var(--accent-color);
             width: 100%;
             max-width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .image-overlay-text {
+            text-align: right;
         }
 
         .image-overlay-card h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 800;
             color: #ffffff;
+            margin-bottom: 2px;
         }
 
         .image-overlay-card p {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--accent-color);
             font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .small-call-btn {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .small-call-btn:hover {
+            background-color: #b45309;
         }
 
         .main-img {
@@ -464,7 +493,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="profile-sub">إدارة مبيعات وإشراف عام على تنفيذ المشاريع لتركيب السيراميك والرخام والبورسلين</div>
+                <div class="profile-sub">إدارة مبيعات وتنفيذ وإشراف على كافة الأعمال والمشاريع</div>
             </div>
 
             <!-- أزرار اتصال واتساب تحت القسم الأول -->
@@ -478,11 +507,16 @@
             </div>
         </div>
 
-        <!-- صورة القسم الأول ومقاطع النصوص التي فوقها -->
+        <!-- صورة القسم الأول ومقاطع النصوص والزر الصغير الذي فوقها -->
         <div class="hero-image-wrapper">
             <div class="image-overlay-card">
-                <h3>أستاذ محمود علي</h3>
-                <p>إدارة مبيعات وتنفيذ وإشراف على التنفيذ</p>
+                <div class="image-overlay-text">
+                    <h3>أستاذ محمود علي</h3>
+                    <p>إدارة مبيعات وتنفيذ وإشراف على كافة الأعمال والمشاريع</p>
+                </div>
+                <a href="tel:0533069182" class="small-call-btn shake-effect" title="اتصل الآن">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
             </div>
             <img src="m1.jpg" alt="أستاذ محمود علي" class="main-img">
         </div>
