@@ -13,6 +13,7 @@
             --primary-color: #1e293b;
             --accent-color: #d97706;
             --whatsapp-color: #25d366;
+            --call-color: #0284c7;
             --bg-light: #f8fafc;
             --text-dark: #0f172a;
             --text-muted: #475569;
@@ -29,6 +30,56 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
+        }
+
+        /* --- تأثير الاهتزاز للأزرار --- */
+        @keyframes shake-pulse {
+            0% { transform: scale(1) rotate(0deg); }
+            10% { transform: scale(1.1) rotate(-5deg); }
+            15% { transform: scale(1.1) rotate(5deg); }
+            20% { transform: scale(1.1) rotate(-5deg); }
+            25% { transform: scale(1.1) rotate(5deg); }
+            30% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        .shake-effect {
+            animation: shake-pulse 2.5s infinite ease-in-out;
+        }
+
+        /* --- الأزرار الطافية الثابتة (يمين ويسار الشاشة) --- */
+        .floating-btn {
+            position: fixed;
+            bottom: 25px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        /* زر الواتساب على اليمين */
+        .floating-whatsapp {
+            right: 25px;
+            background-color: var(--whatsapp-color);
+        }
+
+        /* زر الاتصال على اليسار */
+        .floating-call {
+            left: 25px;
+            background-color: var(--call-color);
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.15);
+            color: #fff;
         }
 
         /* Header / Navbar */
@@ -81,7 +132,6 @@
             gap: 8px;
             transition: 0.3s;
             border: none;
-            cursor: pointer;
         }
 
         .btn-call:hover {
@@ -174,7 +224,6 @@
             color: #fff;
             text-decoration: none;
             font-size: 1.1rem;
-            transition: 0.3s;
         }
 
         .profile-sub {
@@ -301,15 +350,6 @@
             border: 3px solid var(--accent-color);
         }
 
-        .footer-contacts a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            display: inline-block;
-            margin-top: 10px;
-            direction: ltr;
-        }
-
         .copyright {
             text-align: center;
             padding-top: 1.5rem;
@@ -350,12 +390,21 @@
 </head>
 <body>
 
+    <!-- أزرار التواصل الثابتة الاهتزازية (يمين ويسار الشاشة) -->
+    <a href="https://wa.me/966533069182" target="_blank" class="floating-btn floating-whatsapp shake-effect" title="تواصل عبر الواتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="tel:0533069182" class="floating-btn floating-call shake-effect" title="اتصال مباشر">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
     <!-- Header / Navbar -->
     <header>
         <div class="navbar">
             <div class="logo-container">
-                <!-- كود صورة الشعار (يمكنك استبدال رابط src بصورتك) -->
-                <img src="1000013137.jpg" alt="شعار المؤسسة" class="logo-img">
+                <!-- صورة الشعار (m1.jpg) -->
+                <img src="m1.jpg" alt="شعار المؤسسة" class="logo-img">
                 <div class="logo-text">عالم السيراميك والرخام</div>
             </div>
             <a href="tel:0533069182" class="btn-call">
@@ -368,18 +417,18 @@
     <!-- القسم الأول (Hero Section) -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">متخصصون في توريد وتركيب أحدث أنواع السيراميك والرخام والبورسلين</h1>
+            <h1 class="hero-title">متخصصون في توريد وتركيب أحدث انواع السيراميك والرخام والبورسلين</h1>
             <p class="hero-desc">نقدم أفضل الحلول المعمارية والتنفيذية بأعلى جودة ودقة متناهية لتلبية كافة احتياجات المشاريع السكنية والتجارية.</p>
 
             <div class="profile-card">
                 <div class="profile-header">
                     <span class="profile-title">أستاذ محمود علي</span>
-                    <!-- أزواج أزرار الاتصال المباشرة بجانب اسم أستاذ محمود -->
+                    <!-- أزرار اتصال اهتزازية بجانب الاسم -->
                     <div class="profile-actions">
-                        <a href="tel:0533069182" class="icon-btn btn-call" title="اتصال مباشر">
+                        <a href="tel:0533069182" class="icon-btn btn-call shake-effect" title="اتصال مباشر">
                             <i class="fa-solid fa-phone"></i>
                         </a>
-                        <a href="https://wa.me/966533069182" target="_blank" class="icon-btn btn-whatsapp" title="مراسلة واتساب">
+                        <a href="https://wa.me/966533069182" target="_blank" class="icon-btn btn-whatsapp shake-effect" title="مراسلة واتساب">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
@@ -387,20 +436,20 @@
                 <div class="profile-sub">إدارة مبيعات وإشراف عام على تنفيذ المشاريع لتركيب السيراميك والرخام والبورسلين</div>
             </div>
 
-            <!-- زر اتصال أسفل القسم الأول -->
+            <!-- أزرار اتصال واتساب تحت القسم الأول -->
             <div class="section-call-bar">
-                <a href="tel:0533069182" class="btn-call">
+                <a href="tel:0533069182" class="btn-call shake-effect">
                     <i class="fa-solid fa-phone"></i> اتصل الآن: 053 306 9182
                 </a>
-                <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp">
+                <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp shake-effect">
                     <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
                 </a>
             </div>
         </div>
 
         <div class="hero-image-container">
-            <!-- كود الصورة الرئيسية للقسم الأول -->
-            <img src="1000013137.jpg" alt="أستاذ محمود علي" class="main-img">
+            <!-- صورة القسم الأول (m1.jpg) -->
+            <img src="m1.jpg" alt="أستاذ محمود علي" class="main-img">
         </div>
     </section>
 
@@ -421,13 +470,13 @@
             <div class="service-card">
                 <i class="fa-solid fa-clipboard-check"></i>
                 <h3>إشراف ميداني</h3>
-                <p>إشراف كامل على خطوات العمل لضمان تسليم المشاريع وفق المواصفات الهندسية المطلوب.</p>
+                <p>إشراف كامل على خطوات العمل لضمان تسليم المشاريع وفق المواصفات الهندسية المطلوبة.</p>
             </div>
         </div>
 
         <!-- زر اتصال أسفل قسم الخدمات -->
         <div class="center-btn-wrapper">
-            <a href="tel:0533069182" class="btn-call">
+            <a href="tel:0533069182" class="btn-call shake-effect">
                 <i class="fa-solid fa-phone"></i> اطلب الخدمة الآن: 053 306 9182
             </a>
         </div>
@@ -437,23 +486,22 @@
     <footer>
         <div class="footer-container">
             <div class="footer-img-container">
-                <!-- كود صورة القسم الأخير -->
-                <img src="1000013137.jpg" alt="أستاذ محمود علي" class="footer-img">
+                <!-- صورة القسم الأخير (m1.jpg) -->
+                <img src="m1.jpg" alt="أستاذ محمود علي" class="footer-img">
                 <div>
                     <h3>تواصل معنا الآن</h3>
                     <p>جاهزون لاستقبال استفساراتكم وتنفيذ مشاريعكم بأعلى كفاءة</p>
                 </div>
             </div>
 
-            <!-- زر اتصال أسفل القسم الأخير -->
+            <!-- أزرار اتصال أسفل القسم الأخير -->
             <div class="footer-contacts">
-                <p><i class="fa-solid fa-headset"></i> الخدمة والمبيعات:</p>
-                <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="tel:0533069182" class="btn-call">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <a href="tel:0533069182" class="btn-call shake-effect">
                         <i class="fa-solid fa-phone"></i> 053 306 9182
                     </a>
-                    <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i> واتساب
+                    <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp shake-effect">
+                        <i class="fa-brands fa-whatsapp"></i> واتساب مباشر
                     </a>
                 </div>
             </div>
