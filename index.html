@@ -32,6 +32,13 @@
             line-height: 1.6;
         }
 
+        /* تنسيق أرقام الهاتف لتبدو بشكل طبيعي LTR */
+        .phone-number {
+            direction: ltr;
+            display: inline-block;
+            unicode-bidi: embed;
+        }
+
         /* --- تأثير الاهتزاز للأزرار --- */
         @keyframes shake-pulse {
             0% { transform: scale(1) rotate(0deg); }
@@ -65,13 +72,11 @@
             transition: all 0.3s ease;
         }
 
-        /* زر الواتساب على اليمين */
         .floating-whatsapp {
             right: 25px;
             background-color: var(--whatsapp-color);
         }
 
-        /* زر الاتصال على اليسار */
         .floating-call {
             left: 25px;
             background-color: var(--call-color);
@@ -232,11 +237,38 @@
             font-weight: 600;
         }
 
-        .hero-image-container {
+        /* حاوي الصورة الرئيسية مع النص أعلاها */
+        .hero-image-wrapper {
             flex: 1;
             min-width: 300px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-overlay-card {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--accent-color);
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .image-overlay-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .image-overlay-card p {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
         }
 
         .main-img {
@@ -403,13 +435,12 @@
     <header>
         <div class="navbar">
             <div class="logo-container">
-                <!-- صورة الشعار (m1.jpg) -->
                 <img src="m1.jpg" alt="شعار المؤسسة" class="logo-img">
                 <div class="logo-text">عالم السيراميك والرخام</div>
             </div>
             <a href="tel:0533069182" class="btn-call">
                 <i class="fa-solid fa-phone"></i>
-                053 306 9182
+                <span class="phone-number">053 306 9182</span>
             </a>
         </div>
     </header>
@@ -417,7 +448,7 @@
     <!-- القسم الأول (Hero Section) -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">متخصصون في توريد وتركيب أحدث انواع السيراميك والرخام والبورسلين</h1>
+            <h1 class="hero-title">متخصصون في توريد وتركيب أحدث أنواع السيراميك والرخام والبورسلين</h1>
             <p class="hero-desc">نقدم أفضل الحلول المعمارية والتنفيذية بأعلى جودة ودقة متناهية لتلبية كافة احتياجات المشاريع السكنية والتجارية.</p>
 
             <div class="profile-card">
@@ -439,7 +470,7 @@
             <!-- أزرار اتصال واتساب تحت القسم الأول -->
             <div class="section-call-bar">
                 <a href="tel:0533069182" class="btn-call shake-effect">
-                    <i class="fa-solid fa-phone"></i> اتصل الآن: 053 306 9182
+                    <i class="fa-solid fa-phone"></i> اتصل الآن: <span class="phone-number">053 306 9182</span>
                 </a>
                 <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp shake-effect">
                     <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
@@ -447,8 +478,12 @@
             </div>
         </div>
 
-        <div class="hero-image-container">
-            <!-- صورة القسم الأول (m1.jpg) -->
+        <!-- صورة القسم الأول ومقاطع النصوص التي فوقها -->
+        <div class="hero-image-wrapper">
+            <div class="image-overlay-card">
+                <h3>أستاذ محمود علي</h3>
+                <p>إدارة مبيعات وتنفيذ وإشراف على التنفيذ</p>
+            </div>
             <img src="m1.jpg" alt="أستاذ محمود علي" class="main-img">
         </div>
     </section>
@@ -477,7 +512,7 @@
         <!-- زر اتصال أسفل قسم الخدمات -->
         <div class="center-btn-wrapper">
             <a href="tel:0533069182" class="btn-call shake-effect">
-                <i class="fa-solid fa-phone"></i> اطلب الخدمة الآن: 053 306 9182
+                <i class="fa-solid fa-phone"></i> اطلب الخدمة الآن: <span class="phone-number">053 306 9182</span>
             </a>
         </div>
     </section>
@@ -486,7 +521,6 @@
     <footer>
         <div class="footer-container">
             <div class="footer-img-container">
-                <!-- صورة القسم الأخير (m1.jpg) -->
                 <img src="m1.jpg" alt="أستاذ محمود علي" class="footer-img">
                 <div>
                     <h3>تواصل معنا الآن</h3>
@@ -498,7 +532,7 @@
             <div class="footer-contacts">
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <a href="tel:0533069182" class="btn-call shake-effect">
-                        <i class="fa-solid fa-phone"></i> 053 306 9182
+                        <i class="fa-solid fa-phone"></i> <span class="phone-number">053 306 9182</span>
                     </a>
                     <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp shake-effect">
                         <i class="fa-brands fa-whatsapp"></i> واتساب مباشر
