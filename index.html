@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيع وتركيب السيراميك والرخام والبورسلين</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1e293b;
+            --accent-color: #d97706;
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .phone-btn {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .phone-btn:hover {
+            background-color: #b45309;
+        }
+
+        /* Hero / First Section */
+        .hero {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            border-right: 5px solid var(--accent-color);
+            padding: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 1rem;
+        }
+
+        .profile-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .profile-sub {
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            object-fit: cover;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #ffffff;
+            padding: 4rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        /* Footer / Last Section */
+        footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 2rem;
+        }
+
+        .footer-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .footer-img-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+
+        .footer-contacts a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-top: 10px;
+            direction: ltr;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .profile-card {
+                border-right: none;
+                border-top: 4px solid var(--accent-color);
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-img-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <!-- صورة الشعار -->
+                <img src="1000013137.jpg" alt="شعار المحل" class="logo-img">
+                <div class="logo-text">عالم السيراميك والرخام</div>
+            </div>
+            <a href="tel:0533069182" class="phone-btn">
+                <i class="fa-solid fa-phone"></i>
+                053 306 9182
+            </a>
+        </div>
+    </header>
+
+    <!-- First Section / القسم الأول -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">متخصصون في توريد وتركيب أحدث أنواع السيراميك والرخام والبورسلين</h1>
+            <p class="hero-desc">نقدم أفضل الحلول المعمارية والتنفيذية بأعلى جودة ودقة متناهية لتلبية كافة احتياجات المشاريع السكنية والتجارية.</p>
+
+            <div class="profile-card">
+                <div class="profile-title">أستاذ محمود علي</div>
+                <div class="profile-sub">إدارة مبيعات وإشراف عام على تنفيذ المشاريع لتركيب السيراميك والرخام والبورسلين</div>
+            </div>
+        </div>
+
+        <div class="hero-image-container">
+            <!-- الصورة المطلوبة في القسم الأول -->
+            <img src="1000013137.jpg" alt="أستاذ محمود علي" class="main-img">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-store"></i>
+                <h3>بيع وتوريد</h3>
+                <p>تشكيلة واسعة من أجود أنواع السيراميك والرخام والبورسلين بمختلف المقاسات والتصميمات الحديثة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-hammer"></i>
+                <h3>تركيب وتنفيذ</h3>
+                <p>فريق احترافي متخصص في أعمال التركيب والتثبيت بدقة متناهية وضمان شامل للجودة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <h3>إشراف ميداني</h3>
+                <p>إشراف كامل على خطوات العمل لضمان تسليم المشاريع وفق المواصفات الهندسية المطلوب.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / القسم الأخير -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-img-container">
+                <!-- الصورة المطلوبة في القسم الأخير -->
+                <img src="1000013137.jpg" alt="أستاذ محمود علي" class="footer-img">
+                <div>
+                    <h3>تواصل معنا الآن</h3>
+                    <p>جاهزون لاستقبال استفساراتكم وتنفيذ مشاريعكم بأعلى كفاءة</p>
+                </div>
+            </div>
+
+            <div class="footer-contacts">
+                <p><i class="fa-solid fa-phone"></i> رقم التواصل المباشر:</p>
+                <a href="tel:0533069182">053 306 9182</a>
+            </div>
+        </div>
+        <div class="copyright">
+            جميع الحقوق محفوظة &copy; 2026 - توريد وتركيب السيراميك والرخام والبورسلين
+        </div>
+    </footer>
+
+</body>
+</html>
+
