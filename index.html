@@ -111,16 +111,8 @@
             gap: 15px;
         }
 
-        .logo-img {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--accent-color);
-        }
-
         .logo-text {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: var(--primary-color);
         }
@@ -208,104 +200,15 @@
             margin-bottom: 8px;
         }
 
-        .profile-title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--primary-color);
-        }
-
         .profile-actions {
             display: flex;
             gap: 8px;
         }
 
-        .icon-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-
         .profile-sub {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        /* حاوي الصورة الرئيسية مع البطاقة أعلاها */
-        .hero-image-wrapper {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .image-overlay-card {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 0.8rem 1.2rem;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border-bottom: 3px solid var(--accent-color);
-            width: 100%;
-            max-width: 380px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        .image-overlay-text {
-            text-align: right;
-        }
-
-        .image-overlay-card h3 {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 2px;
-        }
-
-        .image-overlay-card p {
-            font-size: 0.82rem;
-            color: var(--accent-color);
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        .small-call-btn {
-            background-color: var(--accent-color);
-            color: #ffffff;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s;
-        }
-
-        .small-call-btn:hover {
-            background-color: #b45309;
-        }
-
-        .main-img {
-            width: 100%;
-            max-width: 380px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            object-fit: cover;
+            font-weight: 700;
         }
 
         .section-call-bar {
@@ -397,18 +300,13 @@
             padding-bottom: 2rem;
         }
 
-        .footer-img-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+        .footer-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
         }
 
-        .footer-img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent-color);
+        .footer-info p {
+            color: #94a3b8;
         }
 
         .copyright {
@@ -421,7 +319,6 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
-                flex-direction: column-reverse;
                 text-align: center;
             }
 
@@ -442,21 +339,17 @@
                 flex-direction: column;
                 text-align: center;
             }
-
-            .footer-img-container {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
 <body>
 
     <!-- أزرار التواصل الثابتة الاهتزازية (يمين ويسار الشاشة) -->
-    <a href="https://wa.me/966533069182" target="_blank" class="floating-btn floating-whatsapp shake-effect" title="تواصل عبر الواتساب">
+    <a href="https://wa.me/966574688407" target="_blank" class="floating-btn floating-whatsapp shake-effect" title="تواصل عبر الواتساب">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <a href="tel:0533069182" class="floating-btn floating-call shake-effect" title="اتصال مباشر">
+    <a href="tel:0574688407" class="floating-btn floating-call shake-effect" title="اتصال مباشر">
         <i class="fa-solid fa-phone"></i>
     </a>
 
@@ -464,12 +357,11 @@
     <header>
         <div class="navbar">
             <div class="logo-container">
-                <img src="m1.jpg" alt="شعار المؤسسة" class="logo-img">
                 <div class="logo-text">عالم السيراميك والرخام</div>
             </div>
-            <a href="tel:0533069182" class="btn-call">
+            <a href="tel:0574688407" class="btn-call">
                 <i class="fa-solid fa-phone"></i>
-                <span class="phone-number">053 306 9182</span>
+                <span class="phone-number">0574688407</span>
             </a>
         </div>
     </header>
@@ -477,48 +369,33 @@
     <!-- القسم الأول (Hero Section) -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">متخصصون في توريد وتركيب أحدث أنواع السيراميك والرخام والبورسلين</h1>
+            <h1 class="hero-title">متخصصون في توريد وتركيب أحدث انواع السيراميك والرخام والبورسلين</h1>
             <p class="hero-desc">نقدم أفضل الحلول المعمارية والتنفيذية بأعلى جودة ودقة متناهية لتلبية كافة احتياجات المشاريع السكنية والتجارية.</p>
 
             <div class="profile-card">
                 <div class="profile-header">
-                    <span class="profile-title">أستاذ محمود علي</span>
-                    <!-- أزرار اتصال اهتزازية بجانب الاسم -->
+                    <div class="profile-sub">إدارة مبيعات وتنفيذ وإشراف على كافة الأعمال والمشاريع</div>
+                    <!-- أزرار اتصال اهتزازية -->
                     <div class="profile-actions">
-                        <a href="tel:0533069182" class="icon-btn btn-call shake-effect" title="اتصال مباشر">
+                        <a href="tel:0574688407" class="btn-call shake-effect" title="اتصال مباشر">
                             <i class="fa-solid fa-phone"></i>
                         </a>
-                        <a href="https://wa.me/966533069182" target="_blank" class="icon-btn btn-whatsapp shake-effect" title="مراسلة واتساب">
+                        <a href="https://wa.me/966574688407" target="_blank" class="btn-whatsapp shake-effect" title="مراسلة واتساب">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
-                <div class="profile-sub">إدارة مبيعات وتنفيذ وإشراف على كافة الأعمال والمشاريع</div>
             </div>
 
             <!-- أزرار اتصال واتساب تحت القسم الأول -->
             <div class="section-call-bar">
-                <a href="tel:0533069182" class="btn-call shake-effect">
-                    <i class="fa-solid fa-phone"></i> اتصل الآن: <span class="phone-number">053 306 9182</span>
+                <a href="tel:0574688407" class="btn-call shake-effect">
+                    <i class="fa-solid fa-phone"></i> اتصل الآن: <span class="phone-number">0574688407</span>
                 </a>
-                <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp shake-effect">
+                <a href="https://wa.me/966574688407" target="_blank" class="btn-whatsapp shake-effect">
                     <i class="fa-brands fa-whatsapp"></i> تواصل عبر الواتساب
                 </a>
             </div>
-        </div>
-
-        <!-- صورة القسم الأول ومقاطع النصوص والزر الصغير الذي فوقها -->
-        <div class="hero-image-wrapper">
-            <div class="image-overlay-card">
-                <div class="image-overlay-text">
-                    <h3>أستاذ محمود علي</h3>
-                    <p>إدارة مبيعات وتنفيذ وإشراف على كافة الأعمال والمشاريع</p>
-                </div>
-                <a href="tel:0533069182" class="small-call-btn shake-effect" title="اتصل الآن">
-                    <i class="fa-solid fa-phone"></i>
-                </a>
-            </div>
-            <img src="m1.jpg" alt="أستاذ محمود علي" class="main-img">
         </div>
     </section>
 
@@ -545,8 +422,8 @@
 
         <!-- زر اتصال أسفل قسم الخدمات -->
         <div class="center-btn-wrapper">
-            <a href="tel:0533069182" class="btn-call shake-effect">
-                <i class="fa-solid fa-phone"></i> اطلب الخدمة الآن: <span class="phone-number">053 306 9182</span>
+            <a href="tel:0574688407" class="btn-call shake-effect">
+                <i class="fa-solid fa-phone"></i> اطلب الخدمة الآن: <span class="phone-number">0574688407</span>
             </a>
         </div>
     </section>
@@ -554,21 +431,18 @@
     <!-- القسم الأخير (Footer Section) -->
     <footer>
         <div class="footer-container">
-            <div class="footer-img-container">
-                <img src="m1.jpg" alt="أستاذ محمود علي" class="footer-img">
-                <div>
-                    <h3>تواصل معنا الآن</h3>
-                    <p>جاهزون لاستقبال استفساراتكم وتنفيذ مشاريعكم بأعلى كفاءة</p>
-                </div>
+            <div class="footer-info">
+                <h3>تواصل معنا الآن</h3>
+                <p>جاهزون لاستقبال استفساراتكم وتنفيذ مشاريعكم بأعلى كفاءة</p>
             </div>
 
             <!-- أزرار اتصال أسفل القسم الأخير -->
             <div class="footer-contacts">
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="tel:0533069182" class="btn-call shake-effect">
-                        <i class="fa-solid fa-phone"></i> <span class="phone-number">053 306 9182</span>
+                    <a href="tel:0574688407" class="btn-call shake-effect">
+                        <i class="fa-solid fa-phone"></i> <span class="phone-number">0574688407</span>
                     </a>
-                    <a href="https://wa.me/966533069182" target="_blank" class="btn-whatsapp shake-effect">
+                    <a href="https://wa.me/966574688407" target="_blank" class="btn-whatsapp shake-effect">
                         <i class="fa-brands fa-whatsapp"></i> واتساب مباشر
                     </a>
                 </div>
